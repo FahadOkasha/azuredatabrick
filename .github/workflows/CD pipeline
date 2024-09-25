@@ -28,7 +28,7 @@
          $
          EOF
      - name: Upload Notebook to DBFS
-       run: databricks fs cp /path/to/your/notebook /Workspace/Users/your_username/your_notebook --overwrite
+       run: databricks fs cp D:\DE\AZURE DATABRICKS\azuredatabrick\notebook /Workspace/Users/fazhari@mol.gov.qa/cdnotebook --overwrite
        env:
          DATABRICKS_TOKEN: $
 
