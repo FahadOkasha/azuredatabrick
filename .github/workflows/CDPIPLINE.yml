@@ -34,7 +34,7 @@
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
      - name: Upload Notebook to DBFS
-       run: databricks fs cp "D:\DE\test.dbc" "dbfs:/FileStore/Users/fazhari@mol.gov.qa/cdnotebook" --overwrite
+       run: databricks fs cp "D:\DE\test" "dbfs:/FileStore/Users/fazhari@mol.gov.qa/cdnotebook" --overwrite
        env:
          DATABRICKS_TOKEN: $
 
