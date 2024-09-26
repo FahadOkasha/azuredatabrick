@@ -27,6 +27,8 @@
 
      - name: Configure Databricks CLI
        run: |
+         echo $DATABRICKS_HOST
+         echo $DATABRICKS_TOKEN
          databricks configure --token <<EOF
          $DATABRICKS_HOST
          $DATABRICKS_TOKEN
