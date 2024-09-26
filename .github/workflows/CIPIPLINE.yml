@@ -27,10 +27,15 @@
 
      - name: Configure Databricks CLI
        run: |
+         echo $DATABRICKS_HOST
+         echo $DATABRICKS_TOKEN
          databricks configure --token <<EOF
-         $
-         $
+         $DATABRICKS_HOST
+         $DATABRICKS_TOKEN
          EOF
-
+       shell: bash
+       env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
      - name: Download Sample Data from DBFS
        run: databricks fs cp dbfs:/FileStore/sample_sales.csv . --overwrite
